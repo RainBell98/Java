@@ -26,7 +26,6 @@ interface Flyables {
 }
 
 class Cars extends Vehicle {
-
     public Cars(String name,int maxSpeed){
 
         setName(name);
