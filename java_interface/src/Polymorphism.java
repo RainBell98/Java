@@ -87,8 +87,12 @@ public class Polymorphism {
 
         Shape s1 = new Circle(3.3);
         Shape s2 = new Rectangle(3,6.1);
+        Shape[] s3 = {new Circle(3.4),new Rectangle(4,7)};
         System.out.printf("%.2f",s1.area()).println();
         System.out.printf("%.2f",s2.area()).println();
+        for (Shape s: s3){
+            System.out.printf("%.2f",s.area()).println();
+        }
 
         Flyable f1 = new Bird();
         Flyable f2 = new Airplane();
