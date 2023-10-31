@@ -27,11 +27,11 @@ public class Person {
     }
 
     @GetMapping("/people")
-    public String getPerson(Model mo){
+    public String getPerson(Model model){
         Object ArrayList;
         Person person = new Person("kim",20);
         List<Person> infoList = Arrays.asList(person);
-        mo.addAttribute("info",infoList);
+        model.addAttribute("info",infoList);
         return "people";
     }
 }
