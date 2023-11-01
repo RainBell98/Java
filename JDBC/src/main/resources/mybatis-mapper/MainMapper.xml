@@ -1,0 +1,5 @@
+<mapper xmlns="http://mybatis.org/schema/mybatis-mapper">
+    <select id="retrieve" resultType="com.example.JDBC.domain.User">
+        SELECT user*FROM user
+    </select>
+</mapper>
