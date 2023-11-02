@@ -1,11 +1,9 @@
 package com.example.JDBC.domain;
 
 
-public class User {
-
+public class Users {
     private int id;
     private String name,address;
-
     public int getId() {
         return id;
     }

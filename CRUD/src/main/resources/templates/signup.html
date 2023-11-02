@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+<form  method="post" style="margin-right: 20px;" id="form_dto2">
+    아이디 : <input type="text" name="user_id">
+    <br>
+    이름 : <input type="text" name="name">
+    <br>
+    비밀번호 : <input type="text" name="pw">
+    <br>
+    <button type="button" onclick="signUp();">회원가입</button>
+</form>
+<script>
+    function signUp() {
+        var form = document.getElementById('form_dto2');
+        axios.post(`/signup`,
+            {
+                user_id: form.user_id.value,
+                name: form.name.value,
+                pw:form.pw.value,
+            })
+            .then((res)=>{
+                console.log( res );
+            });
+    }
+</script>
+</body>
+</html>
