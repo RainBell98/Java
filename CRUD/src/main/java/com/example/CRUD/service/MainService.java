@@ -20,13 +20,10 @@ public class MainService {
         mainMapper.insertPerson(person);
     }
 
-    public boolean getPerson(PersonDTO personDTO){
+    public PersonDTO getPerson(PersonDTO personDTO){
       Person person = mainMapper.getPerson(personDTO.getUser_id(), personDTO.getPw());
-      if(person == null){
-          return false;
-      }else{
-          return true;
-      }
-
+      PersonDTO data = new PersonDTO();
+      data.setId(person.getId());
+      return data;
     }
 }

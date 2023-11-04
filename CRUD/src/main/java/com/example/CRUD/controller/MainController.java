@@ -22,9 +22,11 @@ public class MainController {
     public String getSignUp(Model model){
         return "signup";
     }
+
     @PostMapping("/signin")
     @ResponseBody
-    public boolean postSignIn(@RequestBody PersonDTO personDTO){
+    public PersonDTO postSignIn(@RequestBody PersonDTO personDTO){
+
         return mainService.getPerson(personDTO);
     }
     @PostMapping("/signup")

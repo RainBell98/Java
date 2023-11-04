@@ -4,6 +4,7 @@ import com.example.CRUD.domain.Person;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 
 import java.util.List;
 
@@ -15,5 +16,7 @@ public interface MainMapper {
 
     @Select("SELECT * FROM person WHERE (user_id = #{user_id} and pw =#{pw})")
     Person getPerson(String user_id,String pw);
+
+//    @Update("UPDATE person set = #{pw} where user_id =#{user_id} ")
 
 }
